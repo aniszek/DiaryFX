@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="954.0" spacing="2.0" stylesheets="@../utils/DiaryStyle.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.EventController">
+   <children>
+      <GridPane prefHeight="558.0" prefWidth="338.0" vgap="20.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="60.0" prefWidth="148.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="455.0" minWidth="10.0" prefWidth="452.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="%category.event" />
+            <Label text="%person.event" GridPane.rowIndex="1" />
+            <Label text="%desc.event" GridPane.rowIndex="3" />
+            <Label text="%rating.event" GridPane.rowIndex="4" />
+            <Label text="%release.event" GridPane.rowIndex="5" />
+            <ComboBox fx:id="categoryComboBox" prefWidth="220.0" GridPane.columnIndex="1" />
+            <ComboBox fx:id="personComboBox" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="descTextArea" prefHeight="400.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Slider fx:id="ratingSlider" blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <DatePicker fx:id="releaseDatePicker" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="%title.event" GridPane.rowIndex="2" />
+            <TextField fx:id="titleTextField" minHeight="50.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#addEventOnAction" text="%save.button" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Button fx:id="changeButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="134.0" text="%show.chart" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         </children>
+         <HBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </HBox.margin>
+         <effect>
+            <Glow />
+         </effect>
+      </GridPane>
+      <ImageView fx:id="imageView" fitHeight="453.0" fitWidth="616.0" pickOnBounds="true" preserveRatio="true">
+         <HBox.margin>
+            <Insets bottom="20.0" left="40.0" right="20.0" top="10.0" />
+         </HBox.margin>
+         <effect>
+            <DropShadow />
+         </effect></ImageView>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</HBox>

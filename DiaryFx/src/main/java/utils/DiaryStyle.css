@@ -1,0 +1,44 @@
+/**
+ * Created by anisz
+ */
+ 
+ .root{
+-fx-base:#2f2d39;
+-fx-background:derive(-fx-base,26.4%);
+-fx-dark-text-color: white;
+-fx-accent: orange;
+-fx-default-button: #F49905;
+-fx-focus-color: white;
+-fx-focus-color: orange;
+-fx-faint-focus-color: orange;
+-fx-background-color: #04061C
+}
+
+.label {
+    -fx-text-fill: ORANGE;
+}
+
+//Przyciski
+.button {
+	-fx-background-color: #F49905;
+	-fx-background-radius: 12;
+	-fx-effect: dropshadow(one-pass-box, black, 14, 0.0, 6, 0);
+}
+
+//Tabela
+.table-row-cell:odd { 
+
+	-fx-background-color: #171336;
+	-fx-background-insets: 0, 0 0 1 0;
+	-fx-padding: 0.0em; /* 0 */
+}
+
+.table-row-cell:selected {
+	-fx-background-color: #F76E02;
+	-fx-table-cell-border-color: black;
+}
+
+//.dialog-pane {
+    -fx-background-color: red;
+//
+//}
